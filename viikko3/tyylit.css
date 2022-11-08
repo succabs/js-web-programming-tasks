@@ -1,0 +1,23 @@
+@media all {
+  p {
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 300px) {
+  p {
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 600px) {
+  p {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 900px) {
+  p {
+    width: 100%;
+  }
+}

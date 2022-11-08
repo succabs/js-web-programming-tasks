@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://appro.mit.jyu.fi/tiea2120/vt/vt3/data.js"></script>
+        <script type="text/javascript" src="vt3.js"></script>
+        <link rel="StyleSheet" href="tyylit.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8"/>
+        <title>Tulospalvelu</title>
+    </head>
+    <body>
+      <div>
+        <!-- Tämän tiedoston sisältöä saa muuttaa vapaasti tästä kommentista eteenpäin ! -->
+        <h1>Tulospalvelu</h1>
+
+        <h1>Lisää joukkue</h1>
+
+        <form action="jlisays" method="post">
+          <fieldset  id="jlisa">
+            <legend>Joukkueen tiedot</legend>
+
+            <p>
+              <label for="nimi">Nimi</label>
+              <input id="nimi" type="text" name="nimi" value=""
+               title="Anna joukkueen nimi" required="required" />
+            </p>
+
+            <p>
+               <label for="luontiaika">Luontiaika</label>
+               <input id="luontiaika" name="luontiaika" type="datetime-local" required="required" max="2017-09-01T01:00">
+            </p>
+
+            <p>
+              <label for="leimaustapa">Leimaustapa</label>
+              <label class="" for="gps">GPS</label>
+              <input id="gps" type="checkbox"
+               name="leimaustapa" value="gps" /><br />
+
+              <label for="nfc">NFC</label>
+              <input id="nfc" type="checkbox"
+               name="leimaustapa" value="nfc"  /><br />
+
+               <label for="qr">QR</label>
+               <input id="qr" type="checkbox"
+                name="leimaustapa" value="qr"  /><br />
+
+                <label for="lomaker">Lomake</label>
+                <input id="lomaker" type="checkbox"
+                 name="leimaustapa" value="lomake"  /><br />
+            </p>
+
+            <p><span>
+              <label for="sarja">Sarja</label>
+
+              <label for="2h">2h</label>
+              <input id="2h" type="radio"
+               name="sarja" value="2h" checked="checked"  required="required" /><br />
+
+              <label for="4h">4h</label>
+              <input id="4h" type="radio"
+               name="sarja" value="4h"  required="required"  /><br />
+
+               <label for="8h">8h</label>
+               <input id="8h" type="radio"
+                name="sarja" value="8h"  required="required"  /><br />
+                </span>
+            </p>
+          </fieldset>
+
+  <p><input type="submit" id="button" value="Tallenna"></p>
+
+        </form>
+      </div>
+
+    </body>
+</html>

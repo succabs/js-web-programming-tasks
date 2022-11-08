@@ -1,0 +1,142 @@
+﻿@media all {
+  p {
+    width: 40%;
+  }
+}
+
+@media all and (min-width: 300px) {
+  p {
+    width: 60%;
+  }
+}
+
+@media all and (min-width: 600px) {
+  p {
+    width: 80%;
+  }
+}
+
+@media all and (min-width: 900px) {
+  p {
+    width: 100%;
+  }
+}
+
+/** overflow hiddeniksi, jotta vältytään turhalta scrollbarilta **/
+html, body {
+  margin: 0;
+  background-color: black;
+        overflow:hidden;
+}
+
+/** piilotetaan alkuperäinen kanin kuva **/
+p{
+  position:absolute;
+  visibility: hidden;
+}
+
+div{
+  position: absolute;
+}
+
+.animsvg {
+  position: absolute;
+  z-index: -1;
+}
+
+canvas {
+  position:absolute;
+}
+
+/** tästä eteenpäin kaikki animoinnit. **/
+.bunnyleft {
+  animation-duration: 5s;
+  animation-name: bunnyleft;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+      z-index: 2;
+}
+
+@keyframes bunnyleft {
+    from {
+      left: 0%;
+      top: 20%;
+    }
+    to {
+      left: 40%;
+      top: 20%;
+    }
+}
+
+.bunnyright {
+  animation-duration: 5s;
+  animation-name: bunnyright;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+      z-index: 3;
+}
+
+@keyframes bunnyright {
+    from {
+      left: 80%;
+      top: 20%;
+    }
+    to {
+      left: 40%;
+      top: 20%;
+    }
+}
+
+.palkki {
+  animation-duration: 4s;
+  position:absolute;
+  animation-name: palkki;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 1;
+
+}
+@keyframes palkki {
+    from {
+      left: 0%;
+      top: 0%;
+    }
+    to {
+      left: 0%;
+      top: 100%;
+    }
+}
+
+.pollo {
+  animation-duration: 5s;
+  position:fixed;
+  animation-name: pollo;
+  animation-iteration-count: infinite;
+  z-index: 4;
+}
+
+@keyframes pollo {
+  from {
+    left: 50%;
+    top: 0%;
+  }
+
+  25% {
+    left: 95%;
+    top: 40%;
+  }
+
+  50% {
+    left: 50%;
+    top: 90%;
+  }
+  75% {
+    left: 0%;
+    top: 45%;
+  }
+
+  to {
+    left: 50%;
+    top: 0%;
+  }
+}
