@@ -1,2 +1,2 @@
 # js-web-programming-tasks
- Some old Javascript files for web programming course, some may work, some may not.
+Weekly Javascript coursework for web programming course. From 2019 I believe. May or may not work.
